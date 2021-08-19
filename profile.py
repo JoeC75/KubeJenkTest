@@ -38,13 +38,13 @@ for i in range(num_nodes):
   # setup Docker
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
   # setup Kubernetes
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_kubernetes.sh"))
-  node.addService(pg.Execute(shell="sh", command="sudo swapoff -a"))
-  node.addService(pg.Execute(shell="sh", command="sudo sed -i '/ swap / s/^/#/' /etc/fstab"))
+  #node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_kubernetes.sh"))
+  #node.addService(pg.Execute(shell="sh", command="sudo swapoff -a"))
+  #node.addService(pg.Execute(shell="sh", command="sudo sed -i '/ swap / s/^/#/' /etc/fstab"))
   
-  if i == 0:
-    node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/kube_manager.sh"))
-  else:
-    node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/kube_worker.sh"))
+  #if i == 0:
+    #node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/kube_manager.sh"))
+  #else:
+    #node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/kube_worker.sh"))
     
 pc.printRequestRSpec(request)
