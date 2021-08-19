@@ -16,6 +16,7 @@ sudo apt-get install -y httping
 sudo apt-get install -y jq
 sudo mv /local/repository/daemon.json /etc/docker/
 sudo systemctl daemon-reload
+sudo systemctl restart docker
 
 # the username needs to be changed
 while IFS= read -r line; do
