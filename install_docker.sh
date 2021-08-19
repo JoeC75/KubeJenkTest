@@ -15,6 +15,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 sudo apt-get install -y httping
 sudo apt-get install -y jq
 sudo mv /local/repository/daemon.json /etc/docker/
+sudo systemctl daemon-reload
 
 # the username needs to be changed
 while IFS= read -r line; do
